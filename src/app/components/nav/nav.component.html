@@ -1,0 +1,26 @@
+<p>
+    <mat-toolbar color="primary">
+
+        <span>
+            <button mat-icon-button  [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" [overlapTrigger]="false">
+                <a mat-menu-item routerLink="/welcome">
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                </a>
+                <a mat-menu-item routerLink="/login"> 
+                    <mat-icon>people_outline</mat-icon>
+                    <span>Login</span>
+                </a>
+
+            </mat-menu>
+        </span>
+
+
+        <span> Okta Demo</span>
+
+
+    </mat-toolbar>
+</p>
