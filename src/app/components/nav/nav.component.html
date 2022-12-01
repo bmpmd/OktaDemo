@@ -6,13 +6,17 @@
                 <mat-icon>menu</mat-icon>
             </button>
             <mat-menu #menu="matMenu" [overlapTrigger]="false">
-                <a mat-menu-item routerLink="/welcome">
+                <a *ngIf="!isAuth" mat-menu-item routerLink="/welcome">
                     <mat-icon>home</mat-icon>
                     <span>Home</span>
                 </a>
-                <a mat-menu-item routerLink="/login"> 
+                <a *ngIf="!isAuth" mat-menu-item routerLink="/login"> 
                     <mat-icon>people_outline</mat-icon>
                     <span>Login</span>
+                </a>
+                <a *ngIf="isAuth" mat-menu-item (click)="logout()" > 
+                    <mat-icon>people_outline</mat-icon>
+                    <span>Logout</span>
                 </a>
 
             </mat-menu>
